@@ -1,0 +1,12 @@
+
+.content {
+    width: 100%;
+    //height: 100%;
+    margin: 0 auto;
+}
+.header {
+    font-size: 38px;
+    color: #303958;
+    padding: 10px;
+    margin: 20px 200px;
+}

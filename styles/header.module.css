@@ -1,0 +1,14 @@
+.link {
+    text-decoration: none;
+    color: #9AA8BA;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.navigator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 150px;
+}

@@ -1,0 +1,14 @@
+.header {
+    font-size: 38px;
+    color: #303958;
+    padding: 10px;
+    margin: 20px 250px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+    margin: 50px 250px;
+}

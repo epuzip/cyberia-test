@@ -1,0 +1,24 @@
+.activeClasses{
+    color: #9AA8BA;
+}
+
+.containerClasses {
+    display: flex;
+    
+    text-decoration: none;
+    padding: 20px;
+    margin: 0px 100px;
+}  
+.listClasses {
+    text-decoration: none;
+    color: #C4D2E3;
+}   
+.list:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 8px;
+    color: #C4D2E3;
+}
+.item ol {
+    text-decoration: none;
+}

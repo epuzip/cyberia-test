@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    padding: 100px;
+}
+.container_item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex-grow: 1;
+    //flex-basis: 0;
+}
+.logo {
+    margin-bottom: 10px;
+} 
+.link {
+    text-decoration: none;
+    color: #EEF3FF;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+}
+.text {
+    color: #EEF3FF;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+}
