@@ -21,6 +21,6 @@ footer {
   background-color: #292b35;
   color: #EEF3FF;
   padding: 20px;
-  height: 200px;
+  flex-shrink: 0;
 }
 

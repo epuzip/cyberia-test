@@ -89,7 +89,7 @@ const ProjectCategoryFilter = (props) => {
     const [ filter, setFilter ] = useFilter()
 
     return <RadioGroup onChange={setFilter} value={filter}>
-        {categories.map(({ name, id }) => {
+        {categories.items.map(({ name, id }) => {
             return <RadioGroup.Options key={category.id}>
                 {
                     ({ active, checked }) => {

@@ -2,7 +2,7 @@
     font-size: 38px;
     color: #303958;
     padding: 10px;
-    margin: 20px 250px;
+    margin: 20px 100px;
 }
 
 .container {
@@ -10,5 +10,19 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
     grid-row-gap: 2rem;
-    margin: 50px 250px;
+    margin: 50px 100px;
+}
+
+@media all and (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+        margin: 20px;
+    }
+}
+@media all and (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin: 20px;
+    }
+
 }

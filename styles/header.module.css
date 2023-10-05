@@ -12,3 +12,11 @@
     padding: 20px;
     margin: 0 150px;
 }
+@media all and (max-width: 800px) {
+    .navigator{
+        flex-direction: column;
+    }
+    .logo {
+        margin: 0;
+    }
+}

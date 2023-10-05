@@ -1,7 +1,7 @@
 
 .container {
     display: flex;
-    margin: 50px 250px;
+    margin: 20px 100px;
 }
 .container_item {
     display: flex;
@@ -47,7 +47,6 @@
 .attachment {
     display: none;
     position: absolute;
-    
 }
 .textarea {
     width: 100%;
@@ -78,4 +77,24 @@
     font-family: 'Rubik', sans-serif;
     flex-grow: 1;
     flex-basis: 0;
+}
+
+@media all and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+}
+
+@media all and (max-width: 500px) {
+    .header {
+        font-size: 20px;
+    }
+    .box {
+        flex-direction: column;
+    }
+    .box_btn {
+        flex: 1;
+    }
 }

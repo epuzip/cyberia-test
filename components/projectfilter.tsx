@@ -4,13 +4,13 @@ import { getProjectCategories }  from '@/app/api/route';
 import  { ProjectCategoryFilter }  from '@/components/projectcategoryfilter';
 import styles from '@/styles/projectitem.module.css';
 
-const Filters = async () => {
-    const  categories  = await getProjectCategories()
+const Filters =  ( props ) => {
+    //const  categories  = await getProjectCategories()
+    const { id, name } = props
     
     return (
-        <div>
-            <ProjectCategoryFilter 
-                categories={categories} />
+        <div key={id}>
+            <button>{name}</button>
         </div>
     )
 }
