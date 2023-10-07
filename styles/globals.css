@@ -14,7 +14,9 @@ main {
 }
 
 header {
+  position: sticky;
   padding: 25px;
+  z-index: 1;
 }
 
 footer {
@@ -22,5 +24,6 @@ footer {
   color: #EEF3FF;
   padding: 20px;
   flex-shrink: 0;
+  //position: fixed;
 }
 
