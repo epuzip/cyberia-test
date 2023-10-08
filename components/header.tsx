@@ -7,9 +7,8 @@ import React, { useState } from 'react';
 import { List } from '@phosphor-icons/react';
 
 const Header = () => {
+    const [isOpen, setOpen] = useState();
 
-    const [isOpen, setOpen] =useState();
-    
     return (
         <header className={styles.header}>
             <span><Image className={styles.header_logo} src='/LOGO.svg' alt='Logo' width={150} height={30} /></span>

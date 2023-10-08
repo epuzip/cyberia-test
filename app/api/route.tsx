@@ -1,6 +1,6 @@
 const HOST = 'https://backend.cyberia.studio/api/v1'
 
-interface Items {
+export interface Items {
     id: number
     title: string
     slug: string
@@ -15,7 +15,7 @@ interface Items {
     categories: ProjectCategory[]
 }
 
-interface ProjectCategory {
+export interface ProjectCategory {
     id: number
     name: string
 }
@@ -32,12 +32,11 @@ interface FeedbackResponse {
 }
 
 
-export const getProjects = async (): Promise<Items[]> => {
+export const getProjects = async (): Promise<{ items: Items[] }> => {
     return fetch(`${HOST}/projects`).then((r) => r.json())
-
 }
 
-export const getProjectCategories = async (): Promise<ProjectCategory[]> => {
+export const getProjectCategories = async (): Promise<{ items: ProjectCategory[] }> => {
     return fetch(`${HOST}/project-categories`).then((r) => r.json())
 }
 

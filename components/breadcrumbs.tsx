@@ -1,46 +1,54 @@
 "use client"
 
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from '@/styles/breadcrumbs.module.css';
-import cn from 'clsx';
 
-type BreadCrumbProps = {
-    homeElement: ReactNode,
-    separator: ReactNode,
-    containerClasses?: string,
-    listClasses?: string,
-    activeClasses?: string,
-    capitalizeLinks?: boolean
+
+enum LinksEnum {
+    projects = 'projects',
+    about = 'about',
+    services = 'services',
+    blog = 'blog',
+    contacts = 'contacts',
 }
 
-const NextBreadcrumb = ({homeElement, separator, containerClasses, listClasses, activeClasses, capitalizeLinks}: BreadCrumbProps) => {
+const LinksName = {
+    [LinksEnum.projects]: 'Проекты',
+    [LinksEnum.about]: 'О нас',
+    [LinksEnum.services]: 'Сервисы',
+    [LinksEnum.blog]: 'Блог',
+    [LinksEnum.contacts]: 'Контакты',
+}
 
+const NextBreadcrumb = () => {
     const paths = usePathname()
-    const pathNames = paths.split('/').filter( path => path )
+    const pathNames = paths.split('/').filter(path => path)
 
     return (
-        <div>
-            <nav className={styles.containerClasses}>
-                <ol className={styles.listClasses}><Link href={'/'}>{homeElement}</Link></ol>
-                {pathNames.length > 0 && separator}
-                {pathNames.map( (link, index) => {
-                    let href = `/${pathNames.slice(0, index + 1).join('/')}`
-                    let item = paths === href ? `${listClasses} ${activeClasses}` : styles.list
-                    let itemLink = capitalizeLinks ? link[0].toUpperCase() + link.slice(1, link.length) : link
-                    return (
-                        <React.Fragment key={index}>
-                            <ol className={styles.item} >
-                                <Link href={href}>{itemLink}</Link>
-                            </ol>
-                            {pathNames.length !== index + 1 && separator}
-                        </React.Fragment>
-                    )
-                })
-            }
-            </nav>
-        </div>
+        <>
+            {!!pathNames.length && <div>
+                <nav className={styles.container}>
+                    <Link href={'/'} className={styles.list}>Главная</Link>
+
+                    {pathNames.map((link, index) => {
+                        let href = `/${pathNames.slice(0, index + 1).join('/')}`
+                        let itemLink = '/' + LinksName[link.toLocaleLowerCase() as LinksEnum]
+
+                        return (
+                            <React.Fragment key={index}>
+                                <span className={styles.item} >
+                                    <Link href={href} className={styles.item}>{itemLink}</Link>
+                                </span>
+                            </React.Fragment>
+                        )
+                    })
+                    }
+                </nav>
+            </div>}
+        </>
+
     )
 }
 

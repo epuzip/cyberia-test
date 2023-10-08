@@ -2,16 +2,17 @@
     display: flex;
     padding: 100px;
 }
+
 .container_item {
     display: flex;
     flex-direction: column;
-    margin: 10px;
     flex-grow: 1;
-    //flex-basis: 0;
 }
+
 .logo {
     margin-bottom: 10px;
-} 
+}
+
 .link {
     text-decoration: none;
     color: #EEF3FF;
@@ -19,6 +20,7 @@
     font-family: 'Rubik', sans-serif;
     padding: 10px;
 }
+
 .text {
     color: #EEF3FF;
     font-size: 14px;
@@ -27,9 +29,9 @@
 
 
 @media all and (max-width: 800px) {
-    .container{
+    .container {
         flex-direction: column;
         padding: 20px;
     }
-    
+
 }

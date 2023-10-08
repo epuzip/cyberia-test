@@ -2,28 +2,26 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
 }
+
 main {
   min-height: 100%;
   flex-grow: 1;
-  
+
 }
 
 header {
   position: sticky;
-  padding: 25px;
   z-index: 1;
 }
 
 footer {
   background-color: #292b35;
   color: #EEF3FF;
-  padding: 20px;
   flex-shrink: 0;
-  //position: fixed;
 }
-

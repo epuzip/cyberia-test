@@ -1,22 +1,21 @@
 .filter {
-    margin: 50px 250px;
+    margin: 50px 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
-    padding: 10px;
     border: none;
 }
-button.active {
-    background: ;
+
+.filter_btn:hover {
+    background: #303958;
     color: #fff;
 }
+
 .filter_btn {
     padding: 10px;
     font-size: 20px;
     color: #303958;
-    //color: #9AA8BA;
     border-radius: 7px;
     border: none;
     cursor: pointer;
-
 }

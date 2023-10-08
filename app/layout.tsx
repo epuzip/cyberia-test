@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import {NextBreadcrumb} from '@/components/breadcrumbs'
+import { NextBreadcrumb } from '@/components/breadcrumbs'
 
 
 const inter = Rubik({ subsets: ['latin'] })
@@ -22,12 +22,11 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-      
-        <NextBreadcrumb 
-          homeElement={'Главная'}
-          separator={<span> / </span>}
-          capitalizeLinks/>
+
+        <NextBreadcrumb />
+
         <main className={inter.className}>{children}</main>
+
         <Footer />
       </body>
     </html>

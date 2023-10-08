@@ -1,24 +1,21 @@
-.activeClasses{
+.container {
+    display: flex;
+    text-decoration: none;
+    padding: 20px 0px;
+    margin: 0px 100px;
+}
+
+.list {
+    text-decoration: none;
+    color: #C4D2E3;
+}
+
+.list:hover {
+    font-weight: bold;
     color: #9AA8BA;
 }
 
-.containerClasses {
-    display: flex;
-    
+.item {
     text-decoration: none;
-    padding: 20px;
-    margin: 0px 100px;
-}  
-.listClasses {
-    text-decoration: none;
-    color: #C4D2E3;
-}   
-.list:hover {
-    text-decoration: underline;
-    font-weight: bold;
-    margin: 0 8px;
-    color: #C4D2E3;
-}
-.item ol {
-    text-decoration: none;
+    color: #c2c9d2;
 }
