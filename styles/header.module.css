@@ -43,28 +43,28 @@
     display: none;
     margin-left: auto;
     margin-right: 50px;
+
 }
 
-
-@media all and (max-width: 720px) {
+@media all and (max-width: 768px) {
     .header_nav {
         position: fixed;
-        display: flex;
         flex-direction: column;
         height: 100%;
         width: 100%;
-        left: -225px;
-        transition: transform 0.3s linear;
-    }
-
-    .header_nav.active {
-        transform: translateX(100%);
     }
 
     .header_list {
-        flex: 1;
+        display: none;
+    }
+
+    .header_list.active {
+        position: absolute;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: blue;
         padding: 40px 0 60px;
     }
 
@@ -81,11 +81,13 @@
     }
 
     .header_button {
-        display: block;
+        display: flex;
+        position: relative;
         margin-left: auto;
         background-color: transparent;
         border: none;
-
+        cursor: pointer;
     }
+
 
 }

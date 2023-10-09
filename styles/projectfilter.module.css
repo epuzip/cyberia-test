@@ -19,3 +19,14 @@
     border: none;
     cursor: pointer;
 }
+
+@media all and (max-width: 500px) {
+    .filter {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+        margin: 20px;
+    }
+
+    .filter_btn {
+        margin: 20px;
+    }
+}

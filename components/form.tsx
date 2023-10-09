@@ -40,38 +40,48 @@ export default function Form() {
             </div>
 
             <form method='post' className={styles.container_item} onSubmit={onSubmit}>
-                <label htmlFor="email"></label>
-                <input className={styles.input}
-                    name='email'
-                    type="email"
-                    placeholder="Email"
-                />
-                <label htmlFor="tel"></label>
-                <input className={styles.input}
-                    type="tel"
-                    name='tel'
-                    placeholder="Телефон"
-                />
+                <div className={styles.form_label}>
+                    <label htmlFor="email"></label>
+                    <input className={styles.form_input}
+                        name='email'
+                        type="email"
+                        placeholder="Email"
+                        required
+                    />
+                </div>
+                <div className={styles.form_label}>
+                    <label htmlFor="tel"></label>
+                    <input className={styles.form_input}
+                        type="tel"
+                        name='tel'
+                        placeholder="Телефон"
+                        required
+                    />
+                </div>
                 <div className={styles.container_textarea}>
-                    <label htmlFor="message">
-                        <Paperclip size={32} />
+                    <label htmlFor="message"></label>
+                    <textarea className={styles.textarea}
+                        rows={4}
+                        name='msg'
+                        placeholder="Сообщение"
+                        required
+                    />
+                    <div className={styles.textarea_attach}>
+                        <button className={styles.textarea_btn}>
+                            <Paperclip size={32} />
+                        </button>
                         <input className={styles.attachment}
                             type="file"
                             name='file'
                             onChange={handleFileChange}
                         />
-                    </label>
-                    <textarea className={styles.textarea}
-                        rows={4}
-                        name='msg'
-                        placeholder="Сообщение"
-                    />
+                    </div>
                 </div>
                 <div className={styles.box}>
                     <button className={styles.box_btn} type="submit">Отправить</button>
                     <p className={styles.box_text}>Нажимая "Отправить", Вы даете согласие на обработку персональных данных</p>
                 </div>
-            </form>
-        </div>
+            </form >
+        </div >
     );
 }
